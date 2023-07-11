@@ -11,7 +11,7 @@ data:
   LOG_CHANNEL: '{{ .Values.logChannel }}'
   LOG_LEVEL: '{{ .Values.logLevel }}'
 
-  DB_CONNECTION: ' {{ .Values.db.connection }}'
+  DB_CONNECTION: '{{ .Values.db.connection }}'
   DB_HOST: '{{ .Release.Name }}-postgres'
   DB_PORT: '{{ .Values.db.port }}'
   DB_DATABASE: '{{ .Values.db.database }}'
