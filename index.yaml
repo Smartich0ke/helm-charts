@@ -3,7 +3,24 @@ entries:
   ferritecms:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-11T14:40:19.306035654+09:30"
+    created: "2023-07-11T14:46:57.993182396+09:30"
+    dependencies:
+    - name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.11.8
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.6.4
+    description: A Helm chart for Ferrite Content Management System
+    digest: 0d516e41900531c1b9a5fc5b937a9cbba63a34e20ed77c4c8a324bf98e7b547f
+    name: ferritecms
+    type: application
+    urls:
+    - https://smartich0ke.github.io/helm-charts/ferritecms-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-07-11T14:46:57.986673468+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -20,7 +37,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-11T14:40:19.311621028+09:30"
+    created: "2023-07-11T14:46:57.99942849+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -35,4 +52,4 @@ entries:
     urls:
     - https://smartich0ke.github.io/helm-charts/ferritecms/ferritecms-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-11T14:40:19.299158719+09:30"
+generated: "2023-07-11T14:46:57.979292045+09:30"
