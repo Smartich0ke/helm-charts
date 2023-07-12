@@ -8,7 +8,7 @@ logLevel: "warning"
 
 db:
   connection: "pgsql"
-  host: "127.0.0.1"
+  host: "ferrite-postgres"
   port: "5432"
   database: "ferrite"
   username: "ferrite-user"
@@ -23,7 +23,7 @@ queue:
 
 redis:
   client: "predis"
-  host: ""
+  host: "ferrite-redis"
   password: ""
   port: "6379"
 
@@ -47,18 +47,13 @@ persistence:
 imageCdnUrl: "null"
 cdnUrl: "null"
 
-postgresql:
-  global:
-    postgresql:
-      database: "ferrite"
-      username: "ferrite-user"
-      password: "ReallyStrongPassword"
-  image:
-    tag: 12.7.0
-  persistence:
-    enabled: true
-    size: 8Gi
-    storageClass: "null"
+postgres:
+  userDatabase:
+    name: "ferrite"
+    username: "ferrite-user"
+    password: "ReallyStrongPassword"
+  storage:
+    className: ""
 
 replicaCount: 1
 

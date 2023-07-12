@@ -12,7 +12,7 @@ data:
   LOG_LEVEL: '{{ .Values.logLevel }}'
 
   DB_CONNECTION: '{{ .Values.db.connection }}'
-  DB_HOST: '{{ .Release.Name }}-postgresql'
+  DB_HOST: '{{ .Values.db.host }}'
   DB_PORT: '{{ .Values.db.port }}'
   DB_DATABASE: '{{ .Values.db.database }}'
   DB_USERNAME: '{{ .Values.db.username }}'
@@ -23,7 +23,7 @@ data:
   QUEUE_CONNECTION: '{{ .Values.queue.connection }}'
 
   REDIS_CLIENT: '{{ .Values.redis.client }}'
-  REDIS_HOST: '{{ .Release.Name }}-redis-master'
+  REDIS_HOST: '{{ .Values.redis.host }}'
   REDIS_PASSWORD: '{{ .Values.redis.password }}'
   REDIS_PORT: '{{ .Values.redis.port }}'
 
