@@ -47,14 +47,6 @@ persistence:
 imageCdnUrl: "null"
 cdnUrl: "null"
 
-postgres:
-  userDatabase:
-    name: "ferrite"
-    username: "ferrite-user"
-    password: "ReallyStrongPassword"
-  storage:
-    className: ""
-
 replicaCount: 1
 
 image:
