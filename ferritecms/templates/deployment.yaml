@@ -186,6 +186,17 @@ spec:
                 configMapKeyRef:
                   name: {{ include "ferritecms.fullname" . }}
                   key: CDN_URL
+            - name: APP_KEY
+              valueFrom:
+                {{ if .Values.appKeySecret.existingSecretName }}
+                secretKeyRef:
+                  name: {{ .Values.appKeySecret.existingSecretName }}
+                  key: APP_KEY
+                {{ else }}
+                secretKeyRef:
+                  name: {{ include "ferritecms.fullname" . }}
+                  key: APP_KEY
+                {{ end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

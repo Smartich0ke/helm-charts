@@ -3,6 +3,11 @@ appEnv: "production"
 appDebug: "false"
 appUrl: "http://localhost"
 
+appKeySecret:
+  useExistingSecret: false
+  existingSecretName: ""
+  appKey: ""
+
 logChannel: "stack"
 logLevel: "warning"
 
