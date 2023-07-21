@@ -3,7 +3,7 @@ entries:
   ferritecms:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.627504331+09:30"
+    created: "2023-07-22T09:21:45.498656732+09:30"
     description: A Helm chart for Ferrite Content Management System
     digest: c8a1d3c755b6871839f266f6fb936b99d5d8a1752e24c169e2aa1461fdfee515
     name: ferritecms
@@ -13,7 +13,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.625100236+09:30"
+    created: "2023-07-22T09:21:45.496597323+09:30"
     description: A Helm chart for Ferrite Content Management System
     digest: e085b6188904da8d6a2687ee00863de24110929ea16e93ec3c7d7156dfa8315e
     name: ferritecms
@@ -23,7 +23,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.622126135+09:30"
+    created: "2023-07-22T09:21:45.494437543+09:30"
     dependencies:
     - name: redis
       repository: https://groundhog2k.github.io/helm-charts/
@@ -40,7 +40,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.619147886+09:30"
+    created: "2023-07-22T09:21:45.491875764+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -57,7 +57,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.608977653+09:30"
+    created: "2023-07-22T09:21:45.485129568+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -74,7 +74,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.59770441+09:30"
+    created: "2023-07-22T09:21:45.478627315+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -91,7 +91,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-07-20T11:52:01.584985978+09:30"
+    created: "2023-07-22T09:21:45.472342207+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -108,7 +108,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-20T11:52:01.638139846+09:30"
+    created: "2023-07-22T09:21:45.510992044+09:30"
     dependencies:
     - name: redis
       repository: https://charts.bitnami.com/bitnami
@@ -123,4 +123,43 @@ entries:
     urls:
     - https://smartich0ke.github.io/helm-charts/ferritecms/ferritecms-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-20T11:52:01.569584655+09:30"
+  synapse:
+  - annotations:
+      artifacthub.io/changes: |2
+         - "**deps:** update matrixdotorg/synapse docker tag to v1.88.0 ([8057ac0](https://github.com/halkeye-helm-charts/synapse/commit/8057ac0c72fc27dcb9905f3e1445743146b58e07))"
+      artifacthub.io/images: |
+        - name: synapse
+          image: "matrixdotorg/synapse:v1.88.0"
+    apiVersion: v2
+    appVersion: v1.80.0
+    created: "2023-07-22T09:21:45.505176175+09:30"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: ~12.3.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: ~17.10.0
+    description: The reference implementation for a Matrix.org chat server
+    digest: 995b8ba68c92764772201e4724478e300f65723c94b4b682891339dd2a7427f6
+    home: https://github.com/matrix-org/synapse
+    keywords:
+    - synapse
+    - chat
+    - matrix
+    - riot
+    maintainers:
+    - email: helm@gavinmogan.com
+      name: Gavin Mogan
+    name: synapse
+    sources:
+    - https://github.com/matrix-org/synapse
+    - https://hub.docker.com/r/matrixdotorg/synapse
+    - https://matrix.org/blog/home/
+    type: application
+    urls:
+    - https://smartich0ke.github.io/helm-charts/synapse-0.20.0.tgz
+    version: 0.20.0
+generated: "2023-07-22T09:21:45.465506798+09:30"
