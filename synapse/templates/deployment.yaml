@@ -57,6 +57,10 @@ spec:
               mountPath: /data/homeserver.yaml
               subPath: homeserver.yaml
               readOnly: true
+            - name: logging-config
+              mountPath: /data/log.config
+              subPath: log.config
+              readOnly: true
       
       volumes:
         - name: data-volume
@@ -71,6 +75,12 @@ spec:
             items:
               - key: homeserver.yaml
                 path: homeserver.yaml
+        - name: logging-config
+          configMap:
+            name: {{ include "synapse.fullname" . }}-logging
+            items:
+              - key: log.config
+                path: log.config
 
       {{- with .Values.nodeSelector }}
       nodeSelector:
