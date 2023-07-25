@@ -53,6 +53,10 @@ spec:
               mountPath: /data
             - name: media-volume
               mountPath: /data/media_store
+            - name: homeserver-config
+              mountPath: /data/homeserver.yaml
+              subPath: homeserver.yaml
+              readOnly: true
       
       volumes:
         - name: data-volume
@@ -61,10 +65,6 @@ spec:
         - name: media-volume
           persistentVolumeClaim:
             claimName: {{ if .Values.persistence.media.existingClaim }}{{ .Values.persistence.media.existingClaim }}{{ else }}{{ include "synapse.fullname" . }}-media{{ end }}
-        - name: homeserver-config
-          mountPath: /data/homeserver.yaml
-          subPath: homeserver.yaml
-          readOnly: true
         - name: homeserver-config
           configMap:
             name: {{ include "synapse.fullname" . }}
